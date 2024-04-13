@@ -221,7 +221,7 @@ public class DoctorPortalDao {
         // Implement logic to retrieve id using the Bcrypt
         try {
             Connection con = DatabaseConnection.getCon();
-            PreparedStatement statement = con.prepareStatemen2t(query);
+            PreparedStatement statement = con.prepareStatement(query);
             statement.setString(1, email);
             ResultSet rs = statement.executeQuery();
             while (rs.next()) {

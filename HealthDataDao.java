@@ -114,10 +114,8 @@ public class HealthDataDao {
         Connection con = DatabaseConnection.getCon();
         PreparedStatement statement = con.prepareStatement(query);
         statement.setInt(1, healthDataId);
-        int rowsUpdated = statement.executeUpdate();
-        if (rowsUpdated != 0){
-            bool = true;
-        }
+        statement.executeUpdate();
+        bool = true;
     } catch (SQLException e) {
         e.printStackTrace();
     }
